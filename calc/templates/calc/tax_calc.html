@@ -159,6 +159,16 @@
             </tr>
 
             <tr>
+                <td>SFE Repayments</td>
+                <td>{{ result.sfe_repayments }}</td>
+                <td>{{ result.sfe_repayments_monthly }}</td>
+                <td>{{ result.sfe_repayments_weekly }}</td>
+                <td>{{ result.sfe_repayments_daily }}</td>
+                <td>{{ result.sfe_repayments_hourly }}</td>
+                
+            </tr>
+
+            <tr>
                 <td>Take Home (2025)</td>
                 <td>{{ result.take_home }}</td>
                 <td>{{ result.take_home_monthly }}</td>
@@ -167,6 +177,8 @@
                 <td>{{ result.take_home_hourly }}</td>
                 
             </tr>
+
+            
         </table>
     {% endif %}
 </body>

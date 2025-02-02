@@ -43,8 +43,13 @@ def calculate_tax(request):
             # National Insurance Calculation
             ni_amount = ni * taxable_income
 
+            if income > 27295:
+                sfe = (income - 27295) * 0.09
+            else:
+                sfe = 0
+
             # Take Home Pay
-            take_home = income - tax_amount - ni_amount
+            take_home = income - tax_amount - ni_amount - sfe
 
             result = {
                 'gross': format_currency(income),
@@ -77,6 +82,12 @@ def calculate_tax(request):
                 'take_home_weekly': format_currency(take_home / 52),
                 'take_home_daily': format_currency(take_home / 365),
                 'take_home_hourly': format_currency(take_home / 365 / 24),
+
+                'sfe_repayments': format_currency(sfe),
+                'sfe_repayments_monthly': format_currency(sfe / 12),
+                'sfe_repayments_weekly': format_currency(sfe / 52),
+                'sfe_repayments_daily': format_currency(sfe / 365),
+                'sfe_repayments_hourly': format_currency(sfe / 365 / 24),
             }
     else:
         form = TaxForm()
