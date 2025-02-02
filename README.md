@@ -1,7 +1,5 @@
 # [Take-Home Pay Calculator](https://github.com/Dev-0S/Take-Home-Pay-Calculator)
 
-## [Live Demo](https://dev-0s.github.io/take-home-pay-calculator)
-
 - 🧮 A Django-based **Take-Home Pay Calculator** for UK PAYE tax rates.
 - 💰 Calculates **gross income, taxable income, tax paid, NI contributions, and take-home pay**.
 - 🌍 View results in **annual, monthly, weekly, daily, and hourly formats**.
@@ -76,12 +74,13 @@ Now, visit **[http://127.0.0.1:8000](http://127.0.0.1:8000)**.
 | £1,048 - £4,189 | 8% |
 | Above £4,189 | 2% |
 
+### **SFE (Student Finance England) Repayments**
+| Annual Income | SFE Rate |
+|---------------|----------|
+| Below £27,295 | 0% |
+| Above £27,295 | 9% |
+
 ---
 
 ## 📜 License
 This project is under the **MIT License**.
-
----
-
-## ✨ Acknowledgements
-Special thanks to **Django, Python, and Open Source Contributors**! 💙
